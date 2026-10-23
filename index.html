@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>battleship</title>
+        <link rel="stylesheet" href="/src/style.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <h2 id="title">Battleship</h2>
+            <div id="uptime-status" class="status">Systems is Operational</div>
+            <a href="#skill_issue" id="leave-link" hidden>Leave</a>
+        </header>
+
+        <main class="container">
+          <div class="uptime-wrapper">
+            <div class="api-card">
+              <div class="desc-up">
+                <div class="api-name">API</div>
+                <div id="api-status" class="status">Operational</div>
+              </div>
+              <div id="monitor" class="monitor"></div>
+              <div class="desc-bottom">
+                <div class="date-range">50 mins ago</div>
+                <div id="monitor-data"></div>
+                <div class="date-range">now</div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer class="footer">
+            <div> &copy; 2026 battleship-clone.xyz </div>
+            <div>|</div>
+            <a href="https://battleship-clone.xyz" id="status-link">back to the game!</a>
+        </footer>
+    </body>
+    <script type="module" src="/src/main.ts"></script>
+</html>
