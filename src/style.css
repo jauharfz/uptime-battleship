@@ -107,17 +107,23 @@ body{
 	font-size: 75%;
 	opacity: 50%;
 	display: flex;
-	gap: 1rem;
+	justify-content: space-between;
+
 
 }
 
-#status-link{
+.footer a{
 	text-decoration: none;
 	color: black;
 }
 
-#status-link:hover{
+.footer a:hover{
 	color: grey;
+}
+
+.footer .left{
+	display: flex;
+	gap: 1rem;
 }
 
 .cell{

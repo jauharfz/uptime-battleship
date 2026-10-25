@@ -30,7 +30,6 @@ function renderGrid() {
       assignCellStatus(checks[49 - i], monitorCell[i]);
     }
   }
-  console.log(checks[0]);
   updateStatusDescription(checks[0], monitorStats);
 }
 
@@ -57,7 +56,7 @@ async function refreshData() {
   while (true) {
     await getChecksMonitorData();
     renderGrid();
-    await new Promise((r) => setTimeout(r, 5000));
+    await new Promise((r) => setTimeout(r, 60000));
   }
 }
 
@@ -93,7 +92,7 @@ function createGrid() {
 
 function assignCellStatus(check: Check, cell: HTMLElement) {
   cell.title = `Status Code: ${check.status_code}
-Response Time: ${check.response_time}`;
+Response Time: ${check.response_time}ms`;
   if (check.status_code == 0 || check.status_code >= 400) {
     cell.dataset.status = "major";
     return;
